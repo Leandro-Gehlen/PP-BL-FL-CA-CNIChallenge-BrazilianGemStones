@@ -71,15 +71,45 @@ Facilmente é possível trocar. Visto o que o coração da aplicação (Regras d
 
 O backend foi feito em Node JS + Prisma + PostgreSQL.
 
-```
+
 Abra a pasta backend do projeto em sua comand line.
 
 #### Instalando as dependências e criando a pasta NodeModules
 
-
+```
 >
 > npm install 
 >
+```
+
+#### Configure um banco de dados Postgres no arquivo .env
 
 ```
+>
+> DATABASE_URL="postgresql://(SEUNOMEDEUSUARIO):(SUASENHA)@localhost:5432/braziliangemstones?schema=public"
+>
+```
+
+#### Depois de configurar seu banco, crie o banco através do Prisma Client
+
+```
+>
+> npx prima migrate dev
+>
+```
+
+####  Inicialize o servidor Express
+
+```
+>
+> npm run start
+>
+```
+#### Acesse o Postman e faças suas requisições para as rotas /api/ [nome da rota] .
+
+Os nome das rotas estão dentro do arquivo usercrud.ts na pasta routes.
+
+Basta agora cadastrar , atualizar, ler e excluir os usuários quantas vezes quiser.
+
+
 
