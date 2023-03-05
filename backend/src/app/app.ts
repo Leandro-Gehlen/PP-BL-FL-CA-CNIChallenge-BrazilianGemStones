@@ -1,15 +1,15 @@
 import express, { Request, Response } from "express";
 import dotenv from 'dotenv';
 
+import { router } from "./routes";
+
 dotenv.config()
 
 const App = express();
 
 App.use(express.json());
 
-App.get('/', (req: Request, res: Response) => {
-    res.json({ msg: "server works!" })
-})
+App.use(router)
 
 
 
