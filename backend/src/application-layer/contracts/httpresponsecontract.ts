@@ -1,4 +1,4 @@
-export type httpResponse = {
+export type httpResponseAbstraction = {
     statusCode: number
     body: any
 }
