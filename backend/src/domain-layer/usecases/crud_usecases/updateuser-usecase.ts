@@ -1,5 +1,5 @@
 import { User } from "../../entities";
 
-export interface UpdateUser {
-    updateUser(): User
+export interface IUpdateUserData {
+    updateUser(user: User): Promise<User>
 }

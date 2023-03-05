@@ -2,6 +2,7 @@ import { Response, Router, Request } from 'express';
 import { MakeCreateUserController } from '../../factories/makecreateusercontroller';
 import { MakeDeleteUserController } from '../../factories/makedeleteusercontroller';
 import { MakeReadUserDataController } from '../../factories/makereaduserdatacontroller';
+import { MakeUpdateUserDataController } from '../../factories/makeupdateuserdatacontroller';
 
 
 
@@ -27,6 +28,15 @@ export default (router: Router): void => {
 
         const getUserDataController = MakeReadUserDataController()
         const getUserDataHttpResponse = await getUserDataController.handle(req.body)
+        res.json(getUserDataHttpResponse)
+
+    })
+
+    router.post('/updateuser', async (req: Request, res: Response) => {
+
+
+        const updateUserDataController = MakeUpdateUserDataController()
+        const getUserDataHttpResponse = await updateUserDataController.handle(req.body)
         res.json(getUserDataHttpResponse)
 
     })
