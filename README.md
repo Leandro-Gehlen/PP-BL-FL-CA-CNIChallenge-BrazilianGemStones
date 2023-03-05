@@ -33,12 +33,23 @@ Obrigado ao pessoal da CNI pela oportunidade!
 
 # Sobre o Projeto
 
-## Design 
+## Design (Esboço)
+### Esboço da Home 
 
 ![Home](https://github.com/Leandro-Gehlen/PP-BL-FL-CA-CNIChallenge-BrazilianGemStones/blob/main/Imagens/Home.png?raw=true)
 
+### Esboço do Login
 
 ![login](https://github.com/Leandro-Gehlen/PP-BL-FL-CA-CNIChallenge-BrazilianGemStones/blob/main/Imagens/Login.png?raw=true)
+
+### Esboço do Formulário de Cadastro
+
+![cadastro](https://github.com/Leandro-Gehlen/PP-BL-FL-CA-CNIChallenge-BrazilianGemStones/blob/main/Imagens/cadastro.png?raw=true)
+
+### Esboço do Dashboard do Usuário
+
+![dashboard](https://github.com/Leandro-Gehlen/PP-BL-FL-CA-CNIChallenge-BrazilianGemStones/blob/main/Imagens/DASHBOARD.png?raw=true)
+
 
 
 
