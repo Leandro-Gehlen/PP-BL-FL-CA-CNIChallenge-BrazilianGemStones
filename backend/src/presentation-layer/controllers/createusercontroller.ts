@@ -6,7 +6,7 @@ import { CreateUserService } from "../../application-layer/services/users/create
 export class CreateUserController implements IController {
     constructor(private readonly createUserService: CreateUserService) { }
     async handle(HttpResquest: any): Promise<httpResponseAbstraction> {
-
+        console.log(HttpResquest)
         try {
             const user = await this.createUserService.createUser(HttpResquest)
 

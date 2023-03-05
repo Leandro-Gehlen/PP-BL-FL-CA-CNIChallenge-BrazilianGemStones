@@ -5,14 +5,14 @@ import prisma from "../instances/db-instance";
 
 
 export class CreateUserInfraLayer implements ICreateuserInfraLayer {
-    async addUser(HttpResquestBody: any): Promise<UserModel> {
-        const body = HttpResquestBody
+    async addUser(req: any): Promise<UserModel> {
+
         const user = await prisma.user.create({
             data: {
-                firstName: body.firstName as string,
-                lastName: body.lastName as string,
-                email: body.lastName as string,
-                password: body.lastName as string
+                firstName: req.firstName as string,
+                lastName: req.lastName as string,
+                email: req.email as string,
+                password: req.password as string
 
             }
         })

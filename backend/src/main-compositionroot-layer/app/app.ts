@@ -1,15 +1,18 @@
+import { setupRoutes } from './routes'
+
 import express, { Request, Response } from "express";
 import dotenv from 'dotenv';
 
-import { router } from "./routes";
 
 dotenv.config()
 
 const App = express();
-
 App.use(express.json());
+App.use(express.urlencoded({ extended: true }))
 
-App.use(router)
+setupRoutes(App);
+
+
 
 App.use((req: Request, res: Response) => {
     res.status(404).send("Page not found!")
