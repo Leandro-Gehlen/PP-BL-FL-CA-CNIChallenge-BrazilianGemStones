@@ -1,15 +1,10 @@
 import { UserModel } from "../../application-layer/contracts/user-entity-abstraction";
-import { ICreateuserInfraLayerAction } from "../../application-layer/contracts/usercrudcontracs/createuserinfralayercontract";
+import { ICreateuserInfraLayer } from "../../application-layer/contracts/usercrudcontracs/createuserinfralayercontract";
 import prisma from "../instances/db-instance";
 
-/*
-const user = await prisma.user.create({
-    data: { email: 'alice@prisma.io' },
-  })
-*/
 
 
-export class CreateUserInfraLayer implements ICreateuserInfraLayerAction {
+export class CreateUserInfraLayer implements ICreateuserInfraLayer {
     async addUser(HttpResquestBody: any): Promise<UserModel> {
         const body = HttpResquestBody
         const user = await prisma.user.create({
