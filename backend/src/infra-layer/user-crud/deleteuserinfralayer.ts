@@ -5,12 +5,12 @@ import prisma from "../instances/db-instance";
 
 export class DeleteUserInfraLayer implements IDeleteUserInfraLayer {
     async deleteUserFromDb(user: UserModel): Promise<httpResponseAbstraction> {
-
+        console.log("chega no layer inicio")
         try {
             const deletedUser = await prisma.user.delete({
                 where: { id: user.id }
             })
-
+            console.log("chega no layer meio")
             return {
                 statusCode: 200,
                 body: {

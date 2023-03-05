@@ -1,20 +1,21 @@
 import { IController } from "../../application-layer/contracts/controllercontract";
 import { httpResponseAbstraction } from "../../application-layer/contracts/httpresponsecontract";
-import { CreateUserService } from "../../application-layer/services/users/createuserservice";
+import { DeleteUserService } from "../../application-layer/services/users/deleteuserservice";
 
 
-export class CreateUserController implements IController {
-    constructor(private readonly createUserService: CreateUserService) { }
+
+export class DeleteUserController implements IController {
+    constructor(private readonly deleteUserService: DeleteUserService) { }
     async handle(HttpResquest: any): Promise<httpResponseAbstraction> {
-
+        console.log("Chega no controller")
         try {
-            const user = await this.createUserService.createUser(HttpResquest)
+            const user = await this.deleteUserService.deleteUser(HttpResquest)
 
             return {
                 statusCode: 201,
                 body: {
                     status: true,
-                    user
+                    message: "Usuário foi deletado"
                 }
             }
         } catch (e) {
@@ -23,7 +24,7 @@ export class CreateUserController implements IController {
                 statusCode: 500,
                 body: {
                     status: false,
-                    msg: 'deu erro', e
+                    msg: 'deu erro no controller', e
                 }
             }
         }
