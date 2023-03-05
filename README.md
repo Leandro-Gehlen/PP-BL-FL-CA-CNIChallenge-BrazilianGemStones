@@ -39,5 +39,27 @@ Obrigado ao pessoal da CNI pela oportunidade!
 
 
 
+## Backend 
 
+### Clean Architecture
+
+O backend não é um simples CRUD de usuário.
+É um CRUD de usuário feito com base nos princípios da CLEN ARCHITECTURE.
+Respeita ao máximo o SOLID e foi realizado utilizando programação orientada a objetos desacoplada.
+Isso significa que esse projeto é totalmente agnóstico em relação a Frameworks , Bancos de dado e bibliotecas externas.
+Facilmente é possível trocar. Visto o que o coração da aplicação (Regras de Negócio), estão protegidas.
+
+O backend foi feito em Node JS + Prisma + PostgreSQL.
+
+```
+Abra a pasta backend do projeto em sua comand line.
+
+#### Instalando as dependências e criando a pasta NodeModules
+
+
+>
+> npm install 
+>
+
+```
 
