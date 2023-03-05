@@ -14,16 +14,28 @@ O Brasil é um País repleto delas e estão em todos os estados e em todos os lu
 
 O Usuário , na área interna do sistema, após criar sua conta e estar logado, poderia também escolher a sua pedra preferida dentre as que ele "lapidou". Clicando no coração para favoritar.
 
-Todas as informações dos usuários cadastrados estariam disponíveis ao Administrador do sistema em seu deshboard, assim como haveria um formulário para cadastrar novas "pedras" a serem lapidadas.
+Todas as informações dos usuários cadastrados estariam disponíveis ao Administrador do sistema em seu deshboard, assim como haveria um formulário para cadastrar novas "pedras" a serem "lapidadas".
 
 Infelizmente, o tempo foi curto e eu apenas fiz o CRUD do cadastro dos usuários.
 
-Espero que o que foi feito seja o suficiente para desmonstrar a minha capacidade técnica e principalmente, de aprender.
-Pois até 4 dias atrás eu nunca tinha sequer instalado o ângular Cli alguma vez. Ou seja, foi muito desafiante para mim aprender tanto em tão pouco tempo. Estou muito orgulhoso de mim mesmo pelo resultado, ainda que possa não ser o suficiente, foi um grande impulso na minha carreira.Pois agora eu sei Angular! <0/ 
+Espero que o que foi feito seja o suficiente para desmonstrar a minha capacidade técnica e principalmente, minha capacidade de de aprender e dominar uma nova tecnologia rápido.
+
+Pois, até 4 dias atrás eu nunca tinha sequer instalado o Angular Cli alguma vez. Ou seja, foi muito desafiante para mim aprender tanto em tão pouco tempo. Estou muito orgulhoso de mim mesmo pelo resultado.
+Ainda que possa não ser o suficiente, foi um grande impulso na minha carreira.Pois agora eu sei Angular! <0/
+ 
 
 De qualquer forma, não obstante as dificuldades , foi uma experiência muito gratificante criar esse projeto em Angular e Node JS .
 
+Foi puxado... mas valeu a pena!
+
 Obrigado pela oportunidade! 
+
+
+# Sobre o Projeto
+
+## Design 
+
+
 
 
 
