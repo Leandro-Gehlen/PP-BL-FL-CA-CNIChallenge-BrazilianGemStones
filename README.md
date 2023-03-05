@@ -63,6 +63,8 @@ Obrigado ao pessoal da CNI pela oportunidade!
 
 ### Clean Architecture
 
+![CleanArchitecture](https://user-images.githubusercontent.com/114420790/199520508-31a35042-e152-4a17-abad-2a91e5722790.jpg) 
+
 O backend não é um simples CRUD de usuário.
 É um CRUD de usuário feito com base nos princípios da CLEN ARCHITECTURE.
 Respeita ao máximo o SOLID e foi realizado utilizando programação orientada a objetos desacoplada.
