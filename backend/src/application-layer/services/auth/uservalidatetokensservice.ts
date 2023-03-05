@@ -10,7 +10,7 @@ export class UserValidateTokensService implements UserTokensValidation {
 
         const decoded = JWT.verify(
             token,
-            process.env.SECRET_KEY as string
+            process.env.JWT_SECRET_KEY as string
         )
         if (decoded) {
             return { status: true, data: decoded }
