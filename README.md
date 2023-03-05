@@ -63,10 +63,12 @@ Obrigado ao pessoal da CNI pela oportunidade!
 
 ### Clean Architecture
 
+![CleanArchitecture](https://user-images.githubusercontent.com/114420790/199520508-31a35042-e152-4a17-abad-2a91e5722790.jpg) 
+
 O backend não é um simples CRUD de usuário.
 É um CRUD de usuário feito com base nos princípios da CLEN ARCHITECTURE.
 Respeita ao máximo o SOLID e foi realizado utilizando programação orientada a objetos desacoplada.
-Isso significa que esse projeto é totalmente agnóstico em relação a Frameworks , Bancos de dado e bibliotecas externas.
+Isso significa que esse projeto é totalmente agnóstico em relação a Frameworks , Bancos de dados e bibliotecas externas.
 Facilmente é possível trocar. Visto o que o coração da aplicação (Regras de Negócio), estão protegidas.
 
 O backend foi feito em Node JS + Prisma + PostgreSQL.
