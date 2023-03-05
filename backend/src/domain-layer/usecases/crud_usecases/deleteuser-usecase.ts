@@ -1,5 +1,6 @@
+import { httpResponseAbstraction } from "../../../application-layer/contracts/httpresponsecontract";
 import { User } from "../../entities";
 
-export interface DeleteUser {
-    deleteUser(user: User): boolean
+export interface IDeleteUser {
+    deleteUser(user: User): Promise<httpResponseAbstraction>
 }
