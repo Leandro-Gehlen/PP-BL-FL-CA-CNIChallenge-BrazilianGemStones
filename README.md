@@ -35,7 +35,7 @@ Obrigado ao pessoal da CNI pela oportunidade!
 
 ## Design 
 
-![Home]([https://imgbly.com/ib/YJmaw6e4Oi](https://imgbly.com/ib/YJmaw6e4Oi))
+![Home](https://github.com/Leandro-Gehlen/PP-BL-FL-CA-CNIChallenge-BrazilianGemStones/blob/main/Imagens/Home.png?raw=true)
 
 
 
