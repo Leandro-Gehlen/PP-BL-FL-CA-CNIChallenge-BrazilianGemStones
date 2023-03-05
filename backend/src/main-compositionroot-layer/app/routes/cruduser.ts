@@ -1,6 +1,7 @@
 import { Response, Router, Request } from 'express';
 import { MakeCreateUserController } from '../../factories/makecreateusercontroller';
 import { MakeDeleteUserController } from '../../factories/makedeleteusercontroller';
+import { MakeReadUserDataController } from '../../factories/makereaduserdatacontroller';
 
 
 
@@ -18,6 +19,15 @@ export default (router: Router): void => {
         const deleteController = MakeDeleteUserController()
         const DeleteHttpResponse = await deleteController.handle(req.body)
         res.json(DeleteHttpResponse)
+
+    })
+
+    router.get('/getuser', async (req: Request, res: Response) => {
+
+
+        const getUserDataController = MakeReadUserDataController()
+        const getUserDataHttpResponse = await getUserDataController.handle(req.body)
+        res.json(getUserDataHttpResponse)
 
     })
 

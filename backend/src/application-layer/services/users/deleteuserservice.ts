@@ -9,7 +9,7 @@ export class DeleteUserService implements IDeleteUser {
     constructor(private readonly deleteUserInfraLayer: DeleteUserInfraLayer) { }
     async deleteUser(user: User): Promise<httpResponseAbstraction> {
         console.log("Chega no serviço")
-        const deletedUser = await this.deleteUserInfraLayer.deleteUserFromDb(user)
+        const deletedUser = await this.deleteUserInfraLayer.deleteUserFromDb(user) // é uma inconsistência que entre a entidade e o schema do prisma. Não afeta a compilação do código.
         return deletedUser
 
     }

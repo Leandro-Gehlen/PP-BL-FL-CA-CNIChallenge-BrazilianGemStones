@@ -1,5 +1,5 @@
 import { User } from "../../entities";
 
 export interface ReadUser {
-    readUserData(): User
+    readUserData(user: User): Promise<User>
 }
