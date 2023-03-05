@@ -28,14 +28,14 @@ De qualquer forma, não obstante as dificuldades , foi uma experiência muito gr
 
 Foi puxado... mas valeu a pena!
 
-Obrigado pela oportunidade! 
+Obrigado ao pessoal da CNI pela oportunidade! 
 
 
 # Sobre o Projeto
 
 ## Design 
 
-
+![](https://imgbly.com/ib/YJmaw6e4Oi)
 
 
 
