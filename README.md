@@ -114,4 +114,16 @@ Os nome das rotas estão dentro do arquivo usercrud.ts na pasta routes.
 Basta agora cadastrar , atualizar, ler e excluir os usuários quantas vezes quiser.
 
 
+## Frontend
+
+Acesse a pasta frontend no bash e inialize o servigor do Angular
+
+```
+>
+> ng serve
+>
+```
+
+
+
 
