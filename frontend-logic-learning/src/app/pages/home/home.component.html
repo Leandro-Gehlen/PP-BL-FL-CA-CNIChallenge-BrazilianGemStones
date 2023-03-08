@@ -1,1 +1,32 @@
-<h1> This is a Angular frontend project specificaly built to exercises on angular frontend logic.</h1>
+<h1> This is a Angular frontend project specifically built to create exercises on angular frontend logic.</h1>
+<p>Below I´ve created what it´s called "property binding" on angular.
+    Insted of using the href tag on anchor html element, i´ve declared a variable inside the page component with the
+    youtube course url and passed it to the [href]="variableName" that is the syntax to property bindind. You can use
+    property bindin on any attribute of html elements as you wish
+    to bing their value to a variable declared as a propoerty inside the component class.
+</p>
+<a [href]="courseURL" target="_blank">Amazing youtube course</a>
+<p>Showing array data on this page by using *ngfor directive and creating subroutes to subject pages</p>
+<h3>Step by step</h3>
+<ol>
+
+    <li>Create an array of objects inside home component class</li>
+    <li>Use *ngFor directive to show data on view</li>
+    <li>Use string intepolation to show data from the list on the view</li>
+    <li>Create subpages routing linked to each item on the list</li>
+    <li>Create a button and an event binding to send user to the subpage where the subject will be handled</li>
+    <li> Recreate this list by using *ngFor directive</li>
+
+</ol>
+<hr>
+
+<ul>
+    <li *ngFor="let item of subjectsList; let i = index">
+
+        <h2>
+            {{item.subjectTitle}}
+        </h2>
+        <button></button>
+
+    </li>
+</ul>
