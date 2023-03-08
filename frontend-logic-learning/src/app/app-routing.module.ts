@@ -6,7 +6,7 @@ import { TopicComponent } from './pages/topic/topic.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'topic', component: TopicComponent },
+  { path: ':slug', component: TopicComponent },
   { path: '**', component: PagenotfoundComponent }
 ];
 

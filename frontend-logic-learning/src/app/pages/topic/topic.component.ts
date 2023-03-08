@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./topic.component.css']
 })
 export class TopicComponent {
-  subjectsList: Array<any> = [
-    { id: 1, subjectTitle: "How to exchange data between components" }
-  ]
 
 }

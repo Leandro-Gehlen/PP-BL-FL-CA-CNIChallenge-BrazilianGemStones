@@ -9,10 +9,12 @@ import { Component } from '@angular/core';
 
 export class HomeComponent {
 
+  topicsList: Array<any> = [
+    { id: 1, title: "How to exchange data between components" },
+    { id: 2, title: "second" }
+  ]
+
   courseURL: string = "https://www.youtube.com/watch?v=CGLdH5ORX-Y&t=4979s"
 
-  subjectsList: Array<any> = [
-    { id: 1, subjectTitle: "How to exchange data between components" }
-  ]
 
 }
