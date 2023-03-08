@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let item of subjectsList; let i = index">
+
+        <h2>
+            {{item.subjectTitle}}
+        </h2>
+        <button [routerLink]="['/', i]">Go to topic exercise</button>
+
+    </li>
+</ul>

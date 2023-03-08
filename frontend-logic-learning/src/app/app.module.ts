@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
-import { ExchangingDataBtwComponentsComponent } from './pages/topics/exchanging-data-btw-components/exchanging-data-btw-components.component';
+import { TopicComponent } from './pages/topic/topic.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ExchangingDataBtwComponentsComponent
+    TopicComponent
   ],
   imports: [
     BrowserModule,
