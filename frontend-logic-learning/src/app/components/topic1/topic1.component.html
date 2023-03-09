@@ -16,6 +16,7 @@
     </li>
     <li>Open the gate to receive the variable with @Input() on child component. Declare the property binding as a
         variable on child component.That´s ít.</li>
+
 </ol>
 
 <hr>
@@ -33,3 +34,31 @@
 <h3>1- @ViewChild Decorator</h3>
 
 <h3>Exemple @ViewChild() usage - Step by step</h3>
+
+<p>First thing you should realize is that on the HTML file of the child component you don´t have a selector of the
+    parent component.
+    so you can´t bind any property on selector. Because there is no parent selector on child HTML to bind.
+    Like react, passing data from child to parent is mabe by using methods.But how it work?
+</p>
+
+<ol>
+    <li>Create a variable inside the child component with the data you wnat to pass to parent component.</li>
+    <li>In order to use @ViewChild() decorator it must be imported from @angular/core module as you imported the @input
+        decorator before.</li>
+    <li>The @ViewChild() decorator will be imported on the parent component.(The parent will see the child.)</li>
+    <li>You have to pass, as an arg to @ViewChild() decorator , the child component you want to see and get data from.
+    </li>
+    <li>In order to pass the child component as an argument to @ViewChild decorator, you must import the component to
+        parent component .ts file.</li>
+    <li>Remember, react do not have dependeny injection, but Angular does. Once you inject the component on the buil in
+        decorator , ViewChild(), all the propertys and methods of the child became accessible from the parent component.
+    </li>
+    <li>To look on console if you are receiving the data from child yoou must use ngAfterOninit life cicle hook. That´s
+        because if you use the constructor or ngOnInit , the child component does not exists yet and will be display
+        undefined on that life cicle momento.</li>
+    <li>Just access child properties by using this. variable name and the child property or method.
+    </li>
+</ol>
+
+<h3>Displaing data from child component:</h3>
+<p>{{messageFromChild}}</p>
