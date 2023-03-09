@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 import { Topic2Component } from './components/topic2/topic2.component';
 import { Topic1Component } from './components/topic1/topic1.component';
+import { Children1Component } from './components/children1/children1.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { Topic1Component } from './components/topic1/topic1.component';
     PagenotfoundComponent,
     Topic1Component,
     Topic2Component,
+    Children1Component,
 
   ],
   imports: [

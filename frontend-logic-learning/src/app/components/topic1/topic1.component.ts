@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class Topic1Component {
 
+  messageFromParent: string = "You have made it to pass data from a Parent component to a children component."
+
 }

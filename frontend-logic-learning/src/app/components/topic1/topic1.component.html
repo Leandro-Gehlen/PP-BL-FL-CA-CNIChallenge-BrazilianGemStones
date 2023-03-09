@@ -1,1 +1,23 @@
-<p>How to exchange data between components</p>
+<h1>How to exchange data between components</h1>
+
+<h3>Data Flow - Parent to Children</h3>
+
+<P>Sending data from parent to children is very similar with React js. You bind props to the component tag and receive
+    the data on ngOnInit by asigning that to a new variable with the input decorator. @Input.
+</P>
+
+<h3>Exemple - Step by step</h3>
+
+
+<ol>
+    <li>Create a new variable on topic1 component with a string value</li>
+    <li>Create a new component and use it´s selector here on topic1 html file.This new component will be the child.</li>
+    <li>Set a property bing on child selector with the value as the variable name you want to pass to child component.
+    </li>
+    <li>Open the gate to receive the variable with @Input() on child component. Declare the property binding as a
+        variable on child component.That´s ít.</li>
+</ol>
+
+<hr>
+
+<app-children1 [dataFromParent]="messageFromParent"></app-children1>
