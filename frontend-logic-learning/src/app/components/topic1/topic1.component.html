@@ -6,7 +6,7 @@
     the data on ngOnInit by asigning that to a new variable with the input decorator. @Input.
 </P>
 
-<h3>Exemple - Step by step</h3>
+<h3>Exemple @Input() usage - Step by step</h3>
 
 
 <ol>
@@ -21,3 +21,15 @@
 <hr>
 
 <app-children1 [dataFromParent]="messageFromParent"></app-children1>
+
+<h3>Data Flow - Child to parent</h3>
+
+<p>To pass data from child to parent in react you must sento to child component a function and set args so parent
+    component can access them . That´s how you can send data from child to parent in react.</p>
+<p>But, what about Angular? How does it work?Well.. lets see.</p>
+
+<p>There is two ways to pass data from child to parent component on Angular:</p>
+
+<h3>1- @ViewChild Decorator</h3>
+
+<h3>Exemple @ViewChild() usage - Step by step</h3>
