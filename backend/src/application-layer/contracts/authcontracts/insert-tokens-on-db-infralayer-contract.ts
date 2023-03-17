@@ -9,5 +9,5 @@ export type TokenStatus = {
 }
 
 export interface IInsertTokensOnDbInfraLayer {
-    exec(user: UserModel, tokens: Tokens): Promise<TokenStatus>
+    exec(user: UserModel, tokens: Tokens): Promise<TokenStatus | undefined>
 }

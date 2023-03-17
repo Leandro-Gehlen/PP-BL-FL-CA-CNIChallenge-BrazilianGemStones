@@ -11,7 +11,10 @@ export class CreateUserController implements IController {
         try {
             const user = await this.createUserService.createUser(HttpResquest)
 
-            this.userGenerateTokensService.generateTokens(HttpResquest)
+            this.userGenerateTokensService.generateTokens(user)
+
+
+
 
             return {
                 statusCode: 201,

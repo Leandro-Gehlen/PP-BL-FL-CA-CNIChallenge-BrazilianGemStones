@@ -7,7 +7,7 @@ export class CreateUserService implements ICreateUser {
 
     async createUser(HttpResquestBody: any): Promise<User> {
 
-        const user = this.createUserInfraLayer.addUser(HttpResquestBody)
+        const user = await this.createUserInfraLayer.addUser(HttpResquestBody)
         return user
     }
 }

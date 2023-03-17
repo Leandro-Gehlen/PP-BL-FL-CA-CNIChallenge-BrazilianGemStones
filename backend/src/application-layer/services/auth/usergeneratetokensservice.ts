@@ -7,12 +7,14 @@ import dotenv from 'dotenv';
 import JWT from 'jsonwebtoken';
 
 
-
 dotenv.config()
+
+
 
 export class UserGenerateTokensService implements UserGenerateTokensUseCase {
     constructor(private readonly insertTokensOnDbInfraLayer: IInsertTokensOnDbInfraLayer) { }
     async generateTokens(user: User): Promise<Tokens | TokenStatus | undefined> {
+
         try {
             const token = JWT.sign(
                 { email: user.email, password: user.password },
@@ -21,16 +23,18 @@ export class UserGenerateTokensService implements UserGenerateTokensUseCase {
             )
             const refreshToken = JWT.sign(
                 { email: user.email, password: user.password },
-                process.env.SECRET_KEY as string,
-                { expiresIn: '2160h' }
+                process.env.JWT_SECRET_KEY as string,
+                { expiresIn: '90d' }
             )
             const tokens = {
                 token,
                 refreshToken
             }
+
+
             const insertedToken = await this.insertTokensOnDbInfraLayer.exec(user as UserModel, tokens)
 
-            if (insertedToken.status === true) {
+            if (insertedToken?.status === true) {
                 return { token, refreshToken }
             }
 

@@ -1,10 +1,10 @@
 
-import { TokenStatus } from "../../application-layer/contracts/authcontracts/insert-tokens-on-db-infralayer-contract";
+import { IInsertTokensOnDbInfraLayer, TokenStatus } from "../../application-layer/contracts/authcontracts/insert-tokens-on-db-infralayer-contract";
 import { UserModel } from "../../application-layer/contracts/user-entity-abstraction";
 import { Tokens } from "../../domain-layer/usecases/auth_usecases/usergeneratetokens-usecase";
 import prisma from "../instances/db-instance";
 
-export class InsertTokensOnDbInfraLayer implements InsertTokensOnDbInfraLayer {
+export class InsertTokensOnDbInfraLayer implements IInsertTokensOnDbInfraLayer {
     async exec(user: UserModel, tokens: Tokens): Promise<TokenStatus | undefined> {
 
         try {
@@ -16,7 +16,10 @@ export class InsertTokensOnDbInfraLayer implements InsertTokensOnDbInfraLayer {
                     refreshToken: tokens.refreshToken
                 }
             })
+
+
             if (sucess) {
+                console.log("Chega aqui", sucess)
                 return {
                     status: true,
                     data: {
