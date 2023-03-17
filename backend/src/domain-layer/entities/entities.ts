@@ -6,6 +6,8 @@ export type User = {
     password: string
     token?: string
     refreshToken?: string
+    createdAt?: any
+    updatedAt?: any
 
 }
 

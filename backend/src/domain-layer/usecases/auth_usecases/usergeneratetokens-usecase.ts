@@ -6,6 +6,6 @@ export type Tokens = {
     refreshToken: string,
 }
 
-export interface UserGenerateTokens {
+export interface UserGenerateTokensUseCase {
     generateTokens(user: User): Promise<Tokens | TokenStatus | undefined>
 }

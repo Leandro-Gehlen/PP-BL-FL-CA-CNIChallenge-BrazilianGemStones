@@ -1,14 +1,16 @@
 import { User } from "../../../domain-layer/entities";
-import { Tokens, UserGenerateTokens } from "../../../domain-layer/usecases/auth_usecases/usergeneratetokens-usecase";
+import { Tokens, UserGenerateTokensUseCase } from "../../../domain-layer/usecases/auth_usecases/usergeneratetokens-usecase";
 import { IInsertTokensOnDbInfraLayer, TokenStatus } from "../../contracts/authcontracts/insert-tokens-on-db-infralayer-contract";
+import { UserModel } from "../../contracts/user-entity-abstraction";
 
 import dotenv from 'dotenv';
 import JWT from 'jsonwebtoken';
 
 
+
 dotenv.config()
 
-export class UserGenerateTokensService implements UserGenerateTokens {
+export class UserGenerateTokensService implements UserGenerateTokensUseCase {
     constructor(private readonly insertTokensOnDbInfraLayer: IInsertTokensOnDbInfraLayer) { }
     async generateTokens(user: User): Promise<Tokens | TokenStatus | undefined> {
         try {
@@ -26,7 +28,7 @@ export class UserGenerateTokensService implements UserGenerateTokens {
                 token,
                 refreshToken
             }
-            const insertedToken = await this.insertTokensOnDbInfraLayer.exec(tokens)
+            const insertedToken = await this.insertTokensOnDbInfraLayer.exec(user as UserModel, tokens)
 
             if (insertedToken.status === true) {
                 return { token, refreshToken }

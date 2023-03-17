@@ -1,4 +1,5 @@
 import { Tokens } from "../../../domain-layer/usecases/auth_usecases/usergeneratetokens-usecase";
+import { UserModel } from "../user-entity-abstraction";
 
 export type TokenStatus = {
     status: boolean,
@@ -8,5 +9,5 @@ export type TokenStatus = {
 }
 
 export interface IInsertTokensOnDbInfraLayer {
-    exec(tokens: Tokens): Promise<TokenStatus>
+    exec(user: UserModel, tokens: Tokens): Promise<TokenStatus>
 }
