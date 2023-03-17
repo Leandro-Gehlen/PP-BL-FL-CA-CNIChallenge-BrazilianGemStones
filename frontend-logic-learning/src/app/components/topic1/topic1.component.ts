@@ -11,6 +11,7 @@ export class Topic1Component implements AfterViewInit {
 
   messageFromParent: string = "You have made it to pass data from a Parent component to a children component."
   messageFromChild: string = ''
+  messageFromChildUsingOutputAndEmitter: string = ''
 
   @ViewChild(Children1Component) children1Component: any
 
@@ -21,6 +22,10 @@ export class Topic1Component implements AfterViewInit {
       this.messageFromChild = this.children1Component.dataChild
     }, 0)
 
+  }
+
+  receiveEvent($event: any) {
+    this.messageFromChildUsingOutputAndEmitter = $event
   }
 
 }

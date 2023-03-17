@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-children1',
@@ -9,13 +9,17 @@ export class Children1Component implements OnInit {
 
   dataChild: string = 'You have made it to pass data from child to parent by using @ViewChild decorator.Congrats!'
 
+  outputChildMessege: string = 'Child sending data by using output decorator and event emitter.You have received data from child through the event. Congratulations!'
+
   @Input() dataFromParent: string = '';
+
+  @Output() messageEvent = new EventEmitter<string>()
 
 
   ngOnInit() {
   }
 
   onClick() {
-    console.log("Passou o método")
+    this.messageEvent.emit(this.outputChildMessege)
   }
 }

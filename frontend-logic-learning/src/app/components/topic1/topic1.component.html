@@ -1,3 +1,4 @@
+<button routerLink="/">Voltar</button>
 <h1>How to exchange data between components</h1>
 
 <h3>Data Flow - Parent to Children</h3>
@@ -30,7 +31,9 @@
 <p>But, what about Angular? How does it work?Well.. lets see.</p>
 
 <p>There is two ways to pass data from child to parent component on Angular:</p>
-
+<br />
+<hr>
+<br />
 <h3>1- @ViewChild Decorator</h3>
 
 <h3>Exemple @ViewChild() usage - Step by step</h3>
@@ -62,9 +65,10 @@
 
 <h3>Displaing data from child component:</h3>
 <p>{{messageFromChild}}</p>
-
-
-<h3>1- @Output Decorator & Event Emitter</h3>
+<br />
+<hr>
+<br />
+<h3>2- @Output Decorator & Event Emitter</h3>
 
 <h3>Exemple and usage - Step by step</h3>
 
@@ -74,5 +78,20 @@
     it to a variable so
     parent class can have access to all data and methods.
     The second way is when an event accours.
-    Let´s see how does it work.
+    Let´s see how it works.
 </p>
+
+<ol>
+    <li>Create a variable on child component so you can share it to parent component.</li>
+    <li>Import output decorator and eventemitter on child component from @angular/core module.</li>
+    <li> Create Output decorator and asign a new instance of EventEmitter to the variable.</li>
+    <li>inside the click method on children component you have to emmit the event with the data you want to send.</li>
+    <li></li>
+</ol>
+
+<app-children1 (messageEvent)="receiveEvent($event)"></app-children1>
+<br />
+<p>{{messageFromChildUsingOutputAndEmitter}}</p>
+<br />
+<br />
+<button routerLink="/">Voltar</button>
