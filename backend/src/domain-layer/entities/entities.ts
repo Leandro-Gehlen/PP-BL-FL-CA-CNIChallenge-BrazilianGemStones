@@ -4,6 +4,8 @@ export type User = {
     lastName: string
     email: string
     password: string
+    token?: string
+    refreshToken?: string
 
 }
 

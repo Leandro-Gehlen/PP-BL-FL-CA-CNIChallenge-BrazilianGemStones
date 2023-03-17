@@ -5,5 +5,5 @@ export type TokenVerified = {
     data?: any
 }
 export interface UserTokensValidation {
-    validateTokens(token: string): TokenVerified
+    validateTokens(token: string): Promise<TokenVerified>
 }
